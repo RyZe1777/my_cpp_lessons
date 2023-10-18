@@ -1,16 +1,13 @@
 #include <iostream>
+#include <cmath>
+#include "asminhascontas.h"
 using namespace std;
 
-int main()
+int a=2, b=3;
 
-{
-    int a = 4;
-    int b = 5;
-    int c = 2;
-    int d = 1;
-    int resultado = a&=4; 
-    cout << resultado << endl;
+int main(){
+    cout << oDobro(2) <<endl;
     return 0;
+
 }
-
-
+    

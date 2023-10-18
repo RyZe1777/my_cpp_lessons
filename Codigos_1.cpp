@@ -185,4 +185,114 @@ int main()
     return 0;
 }
 -----------------------------------------------------------------------------------------------
+#include <iostream>
+#include <cmath>
+using namespace std;
 
+int a=2, b=3;
+
+int main(){
+    cout << max(a,b) <<endl;
+    return 0;
+}
+-----------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int soma (int a, int b) {
+    int resp = a+b;
+    return resp;
+
+}
+------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int f(int x) { 
+    int resp = 2*x 
+    return resp;
+
+}
+-------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <cmath>
+#include "asminhascontas.h"
+using namespace std;
+
+int a=2, b=3;
+
+int main(){
+    cout << oDobro(2) <<endl;
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+ int a=10, b=12;
+
+int main(){
+   
+   if ( a > b){
+    cout << "é verdadeiro" << endl;
+   }else{
+    cout << "é mentira" << endl;
+
+   }
+
+
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+ int a=10, b=12, c=9;
+
+int main(){
+   
+   if ( a < b && b < c ){
+    cout << "é verdade" << endl;
+   }else{
+    cout << "é mentira" << endl;
+   }
+
+return 0;
+}
+--------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+ int a=10, b=12, c=9;
+
+int main(){
+   
+   if ( a < b || b < c ){
+    cout << "é verdade" << endl;
+   }else{
+    cout << "é mentira" << endl;
+   }
+
+return 0;
+}
+-------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+ int a=10, b=12, c=9;
+
+int main(){
+   
+   if ( a < b){
+    cout << "é verdade" << endl;
+    }else if (a<c){
+        cout << "é verdade" << endl;
+   }else{
+    cout << "é mentira" << endl;
+   }
+
+return 0;
+}
+-----------------------------------------------------------------------------------------------------------
