@@ -213,19 +213,6 @@ int f(int x) {
     return resp;
 
 }
--------------------------------------------------------------------------------------------------
-#include <iostream>
-#include <cmath>
-#include "asminhascontas.h"
-using namespace std;
-
-int a=2, b=3;
-
-int main(){
-    cout << oDobro(2) <<endl;
-
-    return 0;
-}
 ---------------------------------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
@@ -238,11 +225,7 @@ int main(){
     cout << "é verdadeiro" << endl;
    }else{
     cout << "é mentira" << endl;
-
    }
-
-
-
     return 0;
 }
 -------------------------------------------------------------------------------------------------------
@@ -295,4 +278,164 @@ int main(){
 
 return 0;
 }
+--------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+
+int main(){
+   int num;
+   
+   cout<< "Digite um numero:";
+   cin >> num;
+   
+   if(num >= 0){
+   cout<< "Positivo";
+   }else{
+      cout << "Negative";
+   }
+   return 0;
+
+}
 -----------------------------------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+int main(){
+   
+
+   int num; 
+   cout<< "Digite um numero:";
+   cin >> num;
+
+switch (num)
+{
+case 1:
+       cout << "o numero é 1" <<endl;
+       break;
+
+case 2:
+      cout << "o numero é 2" <<endl;
+      break;
+
+default: 
+     cout << "o numero nao é 1 nem 2" << endl;
+     break;
+
+}
+return 0;
+}
+-------------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main(){
+   
+int num=0;
+
+   while (num < 5 ) {
+     cout<< "Digite um numero:";
+     cin >> num;
+}
+
+
+
+
+   return 0;
+}
+-------------------------------------------------------------------------------------------------------
+                                        JOGO DA ADIVINHA SIMPLES :B
+#include <iostream>
+using namespace std;
+
+int numSorte = 22;
+
+int main(){
+   
+int num=0;
+
+   while (numSorte != num) {
+     cout<< "Qual o numero da sorte?";
+     cin >> num;
+}
+cout << "Parabens, voce acertou!" << endl;
+
+   return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+
+                             JOGO DA ADIVINHA SIMPLES UMA BECA AVANÇADO :B
+
+#include <iostream>
+using namespace std;
+int numSorte = 22;
+int main(){
+
+int num=0;
+while(numSorte != num){
+     cout << "Qual o número da sorte? ";
+     cin >> num;
+     if(numSorte > num){ 
+     cout << "O número da sorte é maior do que: " << num << endl;
+     }else if(numSorte < num){
+     cout << "O número da sorte é menor do que: " << num << endl;
+     }else{
+     cout << "Parabéns, você acertou!" << endl;
+     }
+
+}
+cout << "Acabou o jogo!" << endl;
+return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int main(){
+
+int num=0;
+   srand((unsigned) time(0));
+   int numSorte = 1+(rand()%100);  
+   while(numSorte != num){
+     cout << "Qual o número da sorte? ";
+     cin >> num;
+     if(numSorte > num){
+     cout << "O número da sorte é maior do que: " << num << endl;
+     }else if(numSorte < num){
+     cout << "O número da sorte é menor do que: " << num << endl;
+     }else{
+     cout << "Parabéns, você acertou!" << endl;
+    }
+  }
+cout << "Acabou o jogo!" << endl;
+return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int oDobro(int x) { 
+    int resp = 2*x;
+    return resp;
+
+}
+
+#include <iostream>
+#include <cmath>
+#include "asminhascontas.h"
+using namespace std;
+
+int a=2, b=3;
+
+int main(){
+    cout << oDobro(2) <<endl;
+    return 0;
+
+}
+    //este dois codigos tem que ser em files diferentes mas precisam um do outro para funcionar
+-------------------------------------------------------------------------------------------------------------
+
