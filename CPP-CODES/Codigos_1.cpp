@@ -385,7 +385,9 @@ cout << "Acabou o jogo!" << endl;
 return 0;
 }
 -----------------------------------------------------------------------------------------------------------
-#include <iostream>
+                            JOGO DA ADIVINHA SIMPLES AINDA MAIS AVANÇADO :B
+    
+#include <iostream>    
 #include <ctime>
 #include <cstdlib>
 
