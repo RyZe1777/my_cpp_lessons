@@ -338,10 +338,6 @@ int num=0;
      cout<< "Digite um numero:";
      cin >> num;
 }
-
-
-
-
    return 0;
 }
 -------------------------------------------------------------------------------------------------------
@@ -401,6 +397,7 @@ int num=0;
    srand((unsigned) time(0));
    int numSorte = 1+(rand()%100);  
    while(numSorte != num){
+       
      cout << "Qual o número da sorte? ";
      cin >> num;
      if(numSorte > num){
