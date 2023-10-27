@@ -214,6 +214,7 @@ int f(int x) {
 
 }
 ---------------------------------------------------------------------------------------------------
+                                    ELSE E ESSAS PORRAS
 #include <iostream>
 using namespace std;
 
@@ -245,6 +246,7 @@ int main(){
 return 0;
 }
 --------------------------------------------------------------------------------------------------------
+
 #include <iostream>
 using namespace std;
 
@@ -298,7 +300,7 @@ int main(){
 
 }
 -----------------------------------------------------------------------------------------------------------
-
+                                        BREAK
 #include <iostream>
 using namespace std;
 
@@ -327,6 +329,7 @@ default:
 return 0;
 }
 -------------------------------------------------------------------------------------------------------------
+                                            WHILE 
 #include <iostream>
 using namespace std;
 
@@ -338,11 +341,35 @@ int num=0;
      cout<< "Digite um numero:";
      cin >> num;
 }
-
-
-
-
    return 0;
+}
+-------------------------------------------------------------------------------------------------------
+                                         DO WHILE
+#include <iostream>
+using namespace std;
+
+int main(){
+
+int i=10;
+
+   do {
+    cout << "ola" << endl;
+   } while (i !=10);
+
+    return 0;
+
+}
+-------------------------------------------------------------------------------------------------------
+                                        WHILE
+#include <iostream>
+using namespace std;
+
+int main(){
+    int i=10;
+    while (i !=30) {
+        cout << "ola" << endl;
+    }
+    return 0;
 }
 -------------------------------------------------------------------------------------------------------
                                         JOGO DA ADIVINHA SIMPLES :B
@@ -389,6 +416,7 @@ cout << "Acabou o jogo!" << endl;
 return 0;
 }
 -----------------------------------------------------------------------------------------------------------
+                               JOGO DA ADIVINHA COM NUMEROS ALEATORIOS :B
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -415,6 +443,7 @@ cout << "Acabou o jogo!" << endl;
 return 0;
 }
 -----------------------------------------------------------------------------------------------------------
+                                            DOBRO
 #include <iostream>
 using namespace std;
 
@@ -438,4 +467,45 @@ int main(){
 }
     //este dois codigos tem que ser em files diferentes mas precisam um do outro para funcionar
 -------------------------------------------------------------------------------------------------------------
+                                                FOR
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    for (int n=0; n<=10; n++){
+        cout << n << endl;
+    }
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------
+                                            FOR
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int test[4] = {7,8,9,7};
+
+    for(int i=0; i<4; i++){
+    cout << test[i] << endl;
+}
+
+
+return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------
+                                                ARRAY
+#include <iostream>
+using namespace std;
+
+int main(){
+
+string cars[] = {"volvo","BMW","Ford","Mazda","tesla"};
+cout << cars[2] << "\n";
+cars [2] = "Opel";
+cout << cars[2] << "\n";
+
+return 0;
+}
 
