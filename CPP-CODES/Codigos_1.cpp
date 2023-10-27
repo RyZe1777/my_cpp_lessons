@@ -423,7 +423,6 @@ return 0;
                             JOGO DA ADIVINHA SIMPLES AINDA MAIS AVANÇADO :B
     
 #include <iostream>    
->>>>>>> 59015dc1b7afe5d3e448e47307bef39a2b16e908
 #include <ctime>
 #include <cstdlib>
 
