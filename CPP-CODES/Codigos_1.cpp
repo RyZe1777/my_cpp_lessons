@@ -416,8 +416,14 @@ cout << "Acabou o jogo!" << endl;
 return 0;
 }
 -----------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
                                JOGO DA ADIVINHA COM NUMEROS ALEATORIOS :B
 #include <iostream>
+=======
+                            JOGO DA ADIVINHA SIMPLES AINDA MAIS AVANÇADO :B
+    
+#include <iostream>    
+>>>>>>> 59015dc1b7afe5d3e448e47307bef39a2b16e908
 #include <ctime>
 #include <cstdlib>
 
@@ -429,6 +435,7 @@ int num=0;
    srand((unsigned) time(0));
    int numSorte = 1+(rand()%100);  
    while(numSorte != num){
+       
      cout << "Qual o número da sorte? ";
      cin >> num;
      if(numSorte > num){
