@@ -393,7 +393,7 @@ cout << "Parabens, voce acertou!" << endl;
 -----------------------------------------------------------------------------------------------------------
 
                              JOGO DA ADIVINHA SIMPLES UMA BECA AVANÇADO :B
-
+    
 #include <iostream>
 using namespace std;
 int numSorte = 22;
@@ -416,14 +416,9 @@ cout << "Acabou o jogo!" << endl;
 return 0;
 }
 -----------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
                                JOGO DA ADIVINHA COM NUMEROS ALEATORIOS :B
-#include <iostream>
-=======
-                            JOGO DA ADIVINHA SIMPLES AINDA MAIS AVANÇADO :B
-    
+
 #include <iostream>    
->>>>>>> 59015dc1b7afe5d3e448e47307bef39a2b16e908
 #include <ctime>
 #include <cstdlib>
 
