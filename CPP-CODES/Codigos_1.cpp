@@ -467,7 +467,7 @@ int main(){
     return 0;
 
 }
-    //este dois codigos tem que ser em files diferentes mas precisam um do outro para funcionar
+    //este dois codigos tem que ser em files diferentes mas precisam um do outro para funcionar ou podemos declarar o dobro no mm file
 -------------------------------------------------------------------------------------------------------------
                                                 FOR
 #include <iostream>
@@ -524,7 +524,7 @@ int main(){
   return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-
+                                        ARRAY BIDIMENSIONAL                                       
 #include <iostream>
 using namespace std;
 
@@ -549,3 +549,102 @@ for (int i = 0; i < 2; i++){
 return 0;
 }
 ------------------------------------------------------------------------------------------------------------------------------------
+                                            STRUCTURES 
+   
+   #include <iostream>
+using namespace std;
+
+
+struct 
+{
+   string nome;
+   int idade;
+   string codPostal;
+   string rua;
+   string cidade;
+   string pais;
+   
+
+} pessoa1, pessoa2;  
+
+
+int main(){
+
+pessoa1.nome = "joao";
+pessoa1.idade = 20;
+pessoa1.codPostal = "1234-567";
+pessoa1.rua = "rua do joao";
+pessoa1.cidade = "porto";
+pessoa1.pais = "Portugal";
+
+
+
+pessoa2.nome = "maria";
+pessoa2.idade = 23;
+pessoa2.codPostal = "1543-543";
+pessoa2.rua = "rua da maria";
+pessoa2.cidade = "lisboa";
+pessoa2.pais = "Portugal";
+
+cout<< pessoa1.nome << endl;
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------
+                                            FUNÇOES
+#include <iostream>
+using namespace std;
+
+
+int f(int x){
+    return x*x;
+};
+
+int main(){
+
+    cout << f(5) << endl;
+    cout << f(10) << endl;
+
+}
+-----------------------------------------------------------------------------------------------------------------------
+                                        FUNÇAO TIPO VOID
+#include <iostream>
+using namespace std;
+
+
+int f(int x){
+    return x*x;
+};
+
+void ola(string msg){
+   
+        cout << "---------------------------"<< endl;
+        cout << "Erro: " << msg << endl;
+        cout << "---------------------------" << endl;
+    
+    }
+
+
+int main(){
+    ola("ola");
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+                                        FUNÇAO DE MULTIPLICAÇAO
+#include <iostream>
+using namespace std;
+
+
+int multiplicacao( int x, int y=2){
+    return x*y;
+
+}
+
+int main(){
+    cout << multiplicacao(2,3) << endl;
+}
+-------------------------------------------------------------------------------------------------------------------------
+
+   
+   
+   
+                                        
