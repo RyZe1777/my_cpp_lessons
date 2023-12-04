@@ -643,8 +643,46 @@ int main(){
     cout << multiplicacao(2,3) << endl;
 }
 -------------------------------------------------------------------------------------------------------------------------
+                                        REFERENCE
+#include <iostream>
+using namespace std;
 
-   
+// Reference is an alias for a variable 
+string food = "Pizza";
+
+// Create a reference variable
+string &meal = food;
+
+
+int main(){
+    cout << food << "\n";
+    cout << &food << "\n";
+    cout << meal << "\n";
+    cout << &meal << "\n";
+    
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------
+                                                POINTERS
+   #include <iostream>
+using namespace std;
+
+int main(){
+
+    string food = "Pizza";
+    string *ptr = &food;
+
+
+    cout << food << "\n";
+    cout << &food << "\n";
+    cout << ptr << "\n";
+    cout << *ptr << "\n";
+    cout << &ptr << "\n";
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------
+
    
    
                                         
