@@ -12,3 +12,4 @@ int numero;
 using namespace std                          // utilizado para que não se repita o std em todos os comandos padrões da linguagem
 void                                         //void especifica que a função não retorna um valor
 struct                                       //uma forma de agrupar diversas variáveis ​​relacionadas em um só lugar
+cocatenação                                  //juntar duas variaveis 
