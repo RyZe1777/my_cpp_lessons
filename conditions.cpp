@@ -18,7 +18,7 @@ int num=0;
      }else if(numSorte < num){
      cout << "O número da sorte é menor do que: " << num << endl;
      }else{
-     cout << "Parabéns, você acertou!" << << endl;
+     cout << "Parabéns, você acertou!" << endl;
     }
   }
 cout << "Acabou o jogo!" << endl;
