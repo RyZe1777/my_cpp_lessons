@@ -13,3 +13,9 @@ using namespace std                          // utilizado para que não se repit
 void                                         //void especifica que a função não retorna um valor
 struct                                       //uma forma de agrupar diversas variáveis ​​relacionadas em um só lugar
 cocatenação                                  //juntar duas variaveis 
+
+int: 4 bytes (32 bits)
+char: 1 byte (8 bits)
+bool: 1 byte (8 bits)
+float: 4 byte (32 bits)
+double : 8 bytes (64 bits)
