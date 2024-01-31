@@ -8,12 +8,13 @@
 #include <iostream>
 using namespace std;
 double numero;
+
 int arr[3][3] =  {{1, 5, 3},
                  {2, 5, 1},
                  {7, 5, 9}};
 
 void multiplicacao(int n){
-cout << "What's the number for the multiplication: " << endl;
+cout << "What's the number for the multiplication: ";
 cin >> numero; 
 
  for(int l = 0; l < n; l++){
@@ -31,15 +32,19 @@ int main(){
 
 multiplicacao(3);
 
+do{
+      char keyPress; 
+       
+ cout << "\nWould you like to multiply again? [y/n] ";
+        cin >> keyPress;
 
-    
+        if (keyPress == 'y') {
+            system("clear"); multiplicacao(3);
+        } else if (keyPress == 'n') {
+            cout << "Bye" << endl;
+            break;
+        }
+    } while (true);
 
     return 0;
 }
-
-
-
-
-
-
-
