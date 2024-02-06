@@ -11,7 +11,7 @@ int num=0;
    int numSorte = 1+(rand()%100);  
 
    while(numSorte != num){
-     cout << "Qual o número da sorte? ";
+     cout << "Qual o número da sorte? "; 
      cin >> num;
      if(numSorte > num){
      cout << "O número da sorte é maior do que: " << num << endl;
