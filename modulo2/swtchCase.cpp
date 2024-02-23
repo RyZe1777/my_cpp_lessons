@@ -17,6 +17,7 @@ void rest(int a, int b){
 }
 
 void menu(){
+    system("clear");
     cout << "==========================" <<endl;
     cout << "          MENU" <<endl;
     cout << "==========================" <<endl;
@@ -28,7 +29,6 @@ void menu(){
 
 }
 
-
 int getOpcao(){
 
     int opcao;
@@ -38,11 +38,10 @@ int getOpcao(){
     return opcao;
 }
 
-void excutaCalculo(int i, int x, int y){
+void executaCalculo(int opcao, int x, int y){
 
 
-    switch (i)
-    {
+switch (opcao){
     case 1: 
         soma(x,y);
         break;
@@ -67,16 +66,35 @@ void excutaCalculo(int i, int x, int y){
 
 }
 
+int getValorx(){
+
+    int x;
+    cout << "Digite o Valor de x: ";
+    cin >> x;
+    return x;
+}
+
+int getValory(){
+    int y;
+    cout << "Digite o Valor de y: ";
+    cin >> y;
+    return y;
+}
 
 
 
 
 int main(){
 
+    int a;
+    int b;
+    int opcao;
     menu();
-
+    opcao = getOpcao();
+    a = getValorx();
+    b = getValory();
+    executaCalculo(opcao,a,b);
 
     return 0;
 }
-
 
