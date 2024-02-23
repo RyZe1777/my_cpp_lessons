@@ -81,9 +81,6 @@ int getValory(){
     return y;
 }
 
-
-
-
 int main(){
 
     int a;

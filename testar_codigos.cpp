@@ -3,36 +3,14 @@ using namespace std;
 
 //CONTAS
 
+void calculos(){
+
 int a;
 int b;
-const double PI = 3.14159;
 int r;
+const double PI = 3.14159;
 
-//VARIAVEIS ARRAY 5
-
-float notas[5];
-float soma;
-float media;
-float maior = 0;
-float menor = 0;
-// estes valores garantem que as notas inseridas durante o loop serão corretamente atualizadas para a menor e maior nota encontradas ate ao momento
-
-//VARIAVEIS ARRAY 10
-
-float maior_10 = 0;
-float menor_10 = 10; 
-int array[10]= {10,56,9,12,70,23,32,69,17,80};
-
-//VARIAVEIS TABUADA
-
-int n;
-
-
-int main(){
-    
-    //CONTAS
-    
-    cout <<"Qual o valor de a: " <<endl; 
+cout <<"Qual o valor de a: " <<endl; 
         cin >> a;
     cout <<"Qual o valor de b: " <<endl; 
         cin >> b;
@@ -47,21 +25,32 @@ int main(){
     }else{
         cout <<"Nao podemos dividir por 0" <<endl; 
     }
-    
-    //AREA DO CIRCULO
-    
+
     cout << "Vamos calcular a area de um circulo!! " <<endl;
     cout << "Qual o valor do raio (r): " <<endl; 
     cin >> r;
 
     cout << "A area do circulo e: ";
-    cout << PI * r*r <<endl; //formula para calcular a area do circulo
-    
-    
-    //NOTAS DOS ALUNOS
-    
+    cout << PI * r*r <<endl; //formula para calcular a area do circul
+}
+//VARIAVEIS ARRAY 5
 
-    cout << "Quais sao as notas dos alunos? " <<endl;
+void notas(){
+
+float notas[5];
+float soma;
+float media;
+float maior = 0;
+float menor = 0;
+// estes valores garantem que as notas inseridas durante o loop serão corretamente atualizadas para a menor e maior nota encontradas ate ao momento
+
+//VARIAVEIS ARRAY 10
+
+float maior_10 = 0;
+float menor_10 = 10; 
+int array[10]= {10,56,9,12,70,23,32,69,17,80};
+
+ cout << "Quais sao as notas dos alunos? " <<endl;
   
     for(int x=0; x<5; x++){
         cout <<"Aluno" << x + 1 << ":" <<endl;
@@ -102,7 +91,12 @@ int main(){
     cout << "Menor: " << menor_10 << endl;
     cout << "Maior: " << maior_10 << endl;
 
-    //TABUADA
+}
+
+void tabuada(){
+
+        //TABUADA
+    int n;
 
     cout << "Vamos fazer a Tabuada!!" << endl;
     cout << "Digite um número: ";
@@ -112,6 +106,43 @@ int main(){
         cout << n << " x " << k << " = " << n * k << endl;
     }
 
+
+}
+
+void menu(){
+    int opcao;
+
+    system("clear");
+    cout << "==========================" <<endl;
+    cout << "          MENU" <<endl;
+    cout << "==========================" <<endl;
+    cout << "1-calculos" <<endl;
+    cout << "2-notas" <<endl;
+    cout << "3-tabuada" <<endl;
+    cout << "==========================" << endl;
+    cin >> opcao;
+
+switch (opcao)
+{
+case 1:
+    calculos();
+    break;
+case 2:
+    notas();
+    break;
+case 3:
+    tabuada();
+    break;
+
+default:
+    break;
+}
+
+}
+
+int main(){
+
+    menu();
 
     return 0;
 }
