@@ -15,6 +15,10 @@ void divi(int a, int b){
 void rest(int a, int b){
     cout << a % b <<endl;
 }
+void sub(int a, int b){
+    cout << a - b <<endl;
+}
+
 
 void menu(){
     system("clear");
@@ -25,6 +29,7 @@ void menu(){
     cout << "2-multiplicaçao" <<endl;
     cout << "3-divisao" <<endl;
     cout << "4-resto da divisao" <<endl;
+    cout << "5-subtracao" <<endl;
     cout << "==========================" << endl;
 
 }
@@ -58,6 +63,11 @@ switch (opcao){
 
     case 4:
         rest(x,y);
+        break;
+
+
+    case 5:
+        sub(x,y);
         break;
 
     default:
@@ -94,4 +104,3 @@ int main(){
 
     return 0;
 }
-
