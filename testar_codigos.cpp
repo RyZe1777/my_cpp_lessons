@@ -33,6 +33,7 @@ cout <<"Qual o valor de a: " <<endl;
     cout << "A area do circulo e: ";
     cout << PI * r*r <<endl; //formula para calcular a area do circul
 }
+
 //VARIAVEIS ARRAY 5
 
 void notas(){
