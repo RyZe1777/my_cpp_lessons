@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std; 
 
+
+
 /**
  * @brief Funçao que calcula a soma dos numeros até um determinado limite
  * @param limite - limite para a soma
