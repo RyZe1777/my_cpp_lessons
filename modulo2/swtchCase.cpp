@@ -2,7 +2,6 @@ using namespace std;
 #include <iostream>
 
 
-
 void soma(int a, int b){
     cout << a + b <<endl;
 }
@@ -104,6 +103,3 @@ int main(){
 
     return 0;
 }
-
-
-    
