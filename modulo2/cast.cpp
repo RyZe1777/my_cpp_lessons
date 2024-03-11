@@ -29,4 +29,6 @@ int main(){
     cout << "i2: " << i2 << endl;
     cout << "i3: " << i3 << endl;
 
+    //no terminal da 97 pk é o valor do a na tabelaASCII (ver na net)
+
 }
