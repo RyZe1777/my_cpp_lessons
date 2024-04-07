@@ -8,10 +8,10 @@ void tabuada(int n){
 }
 
 int main(){
-    int x = 0;
-    cout << "valor de x: ";
-    cin >> x;
-    tabuada(x);
+    int n = 0;
+    cout << "valor de n: ";
+    cin >> n;
+    tabuada(n);
 }
 
 
