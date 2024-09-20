@@ -11,7 +11,7 @@ struct Produto
 
 void menu(){
     system("clear");
-    cout << "==========================" <<endl;
+    cout << "\n==========================" <<endl;
     cout << "          MENU" <<endl;
     cout << "==========================" <<endl;
     cout << "1-Adicionar Produto" <<endl;
@@ -47,15 +47,34 @@ void adicionarProduto(Produto produtos[], int& quantidadeAtual){
     cout << "Produto Adicionado Com Sucesso!" <<endl;
 }
 
-void exibirProdutos(const Produto produtos[], int quantidadeAtual){
+float calcularValorTotal(const Produto produtos[], int quantidadeAtual){   //ACABAR
+    
+}
+
+
+void exibirProduto(const Produto produtos[], int quantidadeAtual){
     if (quantidadeAtual == 0){
         cout << "Nenhum Produto Encontrado" <<endl;
+    }else {(quantidadeAtual >1);{
+        system("clear");
+        cout << "==========================" <<endl;
+        cout << "  Lista de Produtos" <<endl;
+        for (int x = 0; x < quantidadeAtual; x++){
+            cout << "Produto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
+            cout << "Nome: " << produtos[x].nome <<endl;
+            cout << "Preço: " << produtos[x].preco <<endl;
+            cout << "Quantidade: " << produtos[x].quantidade <<endl;
+            cout << "==========================" <<endl;
+            }   
+        }
     }
 }
 
 
 int main(){
 
+
+do{
     menu();
   
     Produto produtos[150];
@@ -68,7 +87,7 @@ int main(){
         break;
 
     case 2:
-        ;
+        exibirProduto(produtos,quantidadeAtual);
         break;
 
 
@@ -76,13 +95,16 @@ int main(){
         ;
         break;
 
-    case 4:
-        ;
+    case 0:
+        cout <<"Fechando o Programa....." <<endl;
         break;
 
     default:
         break;
     }
 
+}while (getOpcao !=0);
+
     return 0;
+    
 }
