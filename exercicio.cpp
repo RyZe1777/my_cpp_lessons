@@ -6,7 +6,6 @@ struct Produto
     string nome;
     float preco;
     int quantidade;
-
 };
 
 void menu(){
@@ -19,19 +18,15 @@ void menu(){
     cout << "3-Calcular Valor total de Stock" <<endl;
     cout << "0-SAIR" <<endl;
     cout << "==========================" << endl;
-
 }
 
 int getOpcao(){
-
     int opcao;
     cout << "Digite a sua opcao: ";
     cin >> opcao;
 
     return opcao;
 }
-
-
 
 void adicionarProduto(Produto produtos[], int& quantidadeAtual){
     cout << "Qual o Nome do Produto: " << endl;
@@ -44,18 +39,13 @@ void adicionarProduto(Produto produtos[], int& quantidadeAtual){
     cin >> produtos[quantidadeAtual].quantidade;
 
     quantidadeAtual++;
-    cout << "Produto Adicionado Com Sucesso!" <<endl;
+    cout << "\nProduto Adicionado Com Sucesso!" <<endl;
 }
-
-float calcularValorTotal(const Produto produtos[], int quantidadeAtual){   //ACABAR
-    
-}
-
 
 void exibirProduto(const Produto produtos[], int quantidadeAtual){
     if (quantidadeAtual == 0){
-        cout << "Nenhum Produto Encontrado" <<endl;
-    }else {(quantidadeAtual >1);{
+        cout << "\n Nenhum Produto Encontrado" <<endl;
+    }else {(quantidadeAtual >= 1);{
         system("clear");
         cout << "==========================" <<endl;
         cout << "  Lista de Produtos" <<endl;
@@ -63,16 +53,22 @@ void exibirProduto(const Produto produtos[], int quantidadeAtual){
             cout << "Produto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
             cout << "Nome: " << produtos[x].nome <<endl;
             cout << "Preço: " << produtos[x].preco <<endl;
-            cout << "Quantidade: " << produtos[x].quantidade <<endl;
+            cout << "Quantidade: " << produtos[x].preco <<endl;
             cout << "==========================" <<endl;
             }   
         }
     }
 }
 
+float calcularValorTotal(const Produto produtos[], int quantidadeAtual){
+    float total = 0;
+    for(int x = 0; x < quantidadeAtual; x++){
+        total += produtos[x].preco * produtos[x].preco;
+    }
+    return total;
+}
 
 int main(){
-
 
 do{
     menu();
@@ -90,13 +86,12 @@ do{
         exibirProduto(produtos,quantidadeAtual);
         break;
 
-
     case 3:
-        ;
+        cout << "Valor total é: " << calcularValorTotal(produtos,quantidadeAtual) << " € ";
         break;
 
     case 0:
-        cout <<"Fechando o Programa....." <<endl;
+        cout <<"\n Fechando o Programa....." <<endl;
         break;
 
     default:
@@ -106,5 +101,4 @@ do{
 }while (getOpcao !=0);
 
     return 0;
-    
 }
