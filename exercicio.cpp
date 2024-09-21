@@ -53,7 +53,7 @@ void exibirProduto(const Produto produtos[], int quantidadeAtual){
             cout << "Produto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
             cout << "Nome: " << produtos[x].nome <<endl; //metemos produtos[x] para este ter uam referencia no array 
             cout << "Preço: " << produtos[x].preco <<endl;
-            cout << "Quantidade: " << produtos[x].preco <<endl;
+            cout << "Quantidade: " << produtos[x].quantidade <<endl;
             cout << "==========================" <<endl;
         }   
     }
@@ -62,7 +62,7 @@ void exibirProduto(const Produto produtos[], int quantidadeAtual){
 float calcularValorTotal(const Produto produtos[], int quantidadeAtual){
     float total = 0;
     for(int x = 0; x < quantidadeAtual; x++){
-        total += produtos[x].preco * produtos[x].preco;
+        total += produtos[x].preco * produtos[x].quantidade;
     }
     return total;
 }
