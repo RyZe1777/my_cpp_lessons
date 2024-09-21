@@ -39,24 +39,23 @@ void adicionarProduto(Produto produtos[], int& quantidadeAtual){
     cin >> produtos[quantidadeAtual].quantidade;
 
     quantidadeAtual++;
+    
     cout << "\nProduto Adicionado Com Sucesso!" <<endl;
 }
 
 void exibirProduto(const Produto produtos[], int quantidadeAtual){
-    if (quantidadeAtual == 0){
+    if (quantidadeAtual== 0){
         cout << "\n Nenhum Produto Encontrado" <<endl;
-    }else {(quantidadeAtual >= 1);{
-        system("clear");
+    }else{
         cout << "==========================" <<endl;
         cout << "  Lista de Produtos" <<endl;
         for (int x = 0; x < quantidadeAtual; x++){
             cout << "Produto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
-            cout << "Nome: " << produtos[x].nome <<endl;
+            cout << "Nome: " << produtos[x].nome <<endl; //metemos produtos[x] para este ter uam referencia no array 
             cout << "Preço: " << produtos[x].preco <<endl;
             cout << "Quantidade: " << produtos[x].preco <<endl;
             cout << "==========================" <<endl;
-            }   
-        }
+        }   
     }
 }
 
