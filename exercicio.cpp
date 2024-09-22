@@ -8,6 +8,9 @@ struct Produto
     int quantidade;
 };
 
+Produto produtos[150]; 
+int quantidadeAtual = 0;
+
 void menu(){
     system("clear");
     cout << "\n==========================" <<endl;
@@ -50,7 +53,7 @@ void exibirProduto(const Produto produtos[], int quantidadeAtual){
         cout << "==========================" <<endl;
         cout << "  Lista de Produtos" <<endl;
         for (int x = 0; x < quantidadeAtual; x++){
-            cout << "Produto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
+            cout << "\nProduto: " << x + 1 <<endl; //metemos x+1 pa começar a contar do 1
             cout << "Nome: " << produtos[x].nome <<endl; //metemos produtos[x] para este ter uam referencia no array 
             cout << "Preço: " << produtos[x].preco <<endl;
             cout << "Quantidade: " << produtos[x].quantidade <<endl;
@@ -72,8 +75,6 @@ int main(){
 do{
     menu();
   
-    Produto produtos[150];
-    int quantidadeAtual = 0;
     int opcao = getOpcao();
 
     switch (opcao){
