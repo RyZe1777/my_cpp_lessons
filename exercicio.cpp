@@ -8,7 +8,7 @@ struct Produto
     int quantidade;
 };
 
-Produto produtos[150]; 
+Produto produtos[150]; // array com 150 index's
 int quantidadeAtual = 0;
 
 void menu(){
@@ -21,6 +21,7 @@ void menu(){
     cout << "3-Calcular Valor total de Stock" <<endl;
     cout << "0-SAIR" <<endl;
     cout << "==========================" << endl;
+
 }
 
 int getOpcao(){
@@ -71,11 +72,13 @@ float calcularValorTotal(const Produto produtos[], int quantidadeAtual){
 }
 
 int main(){
+    
+int opcao;
 
 do{
     menu();
   
-    int opcao = getOpcao();
+    opcao = getOpcao(); // tem que ser assim senao o while nao reconhece a opcao de sair
 
     switch (opcao){
     case 1: 
@@ -87,7 +90,7 @@ do{
         break;
 
     case 3:
-        cout << "Valor total é: " << calcularValorTotal(produtos,quantidadeAtual) << " € ";
+        cout << "\nValor total é: " << calcularValorTotal(produtos,quantidadeAtual) << "€";
         break;
 
     case 0:
@@ -98,7 +101,7 @@ do{
         break;
     }
 
-}while (getOpcao !=0);
+}while (opcao !=0);
 
     return 0;
 }
