@@ -9,7 +9,7 @@ struct Produto
 };
 
 Produto produtos[150]; // array com 150 index's
-int quantidadeAtual = 0;
+int quantidadeAtual = 0 // mantem controlo da quantidade atual dos produtos adicionados
 
 void menu(){
     system("clear");
