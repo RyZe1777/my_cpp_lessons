@@ -9,7 +9,7 @@ struct Produto
 };
 
 Produto produtos[150]; // array com 150 index's
-int quantidadeAtual = 0 // mantem controlo da quantidade atual dos produtos adicionados
+int quantidadeAtual = 0 // mantem controlo da quantidade atual dos produtos adicionados no array
 
 void menu(){
     system("clear");
@@ -34,8 +34,8 @@ int getOpcao(){
 
 void adicionarProduto(Produto produtos[], int& quantidadeAtual){
     cout << "Qual o Nome do Produto: " << endl;
-    cin >> produtos[quantidadeAtual].nome;
-
+    cin >> produtos[quantidadeAtual].nome; 
+    
     cout << "Qual o Preço do Produto: " <<endl ;
     cin >> produtos[quantidadeAtual].preco;
 
