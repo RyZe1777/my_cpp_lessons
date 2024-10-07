@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream> //biblioteca para ler (ifstream) // para criar e escrever (ofstream) ficheiros
-#include <sstream> //getline
+#include <sstream> //conversao de string em outros dados
  
 using namespace std;
 
@@ -12,13 +12,19 @@ struct Produto
     float preco;
     int quantidade;
 };
-//--------------------------------------------------------------------------------------------------------------------
-Produto produtos[150]; // array com 150 index's
+
+//-----------------------------------------------------------------------------------------------------------
+const int producaomax = 100;
+Produto produtos[producaomax];
 int quantidadeAtual = 0; // mantem controlo da quantidade atual dos produtos adicionados no array
 int ultimoIDutilizado = 0; // vai manter controlo do ID de cada produto
-//---------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------
 void menu(){
+    cout << "\nClique no ENTER para Começar " << endl ;
+    cin.ignore();
+    cin.get();
     system("clear");
+
     cout << "\n==========================" <<endl;
     cout << "          MENU" <<endl;
     cout << "==========================" <<endl;
@@ -28,7 +34,6 @@ void menu(){
     cout << "4-Eliminar Produto" <<endl;
     cout << "5-SAIR" <<endl;
     cout << "==========================" << endl;
-
 }
 
 int getOpcao(){
@@ -39,6 +44,84 @@ int getOpcao(){
     return opcao;
 }
 
+//-----------------------------------------------------------------------------------------------------
+
+void iniciarDB(){
+    
+    ifstream ficheiro("Database.csv");
+    
+    if(!ficheiro){
+        
+        char opcao;
+
+        cout << "O ficheiro da data base não foi encontrado." << endl;
+        
+        cout << "Deseja criar uma nova data base? (s/n): ";
+        cin >> opcao;
+
+        if(opcao == 's'){
+            
+            // Cria um novo ficheiro
+            ofstream ficheiro("Database.csv");
+
+            ficheiro.close();
+            
+            system("clear");
+            
+            cout << "\nFicheiro data base criado com sucesso!" << endl;
+            
+        }else{
+            
+            system("clear");
+            
+            cout << "\nA fechar o Programa " << endl;
+            
+            exit(0); //fecha o programa
+        }
+    }
+}
+
+//-------------------------------------------------------------------------------------------
+void lerprodutosDB(Produto produtos[], int& quantidadeAtual, int& ultimoIDutilizado){
+ 
+    ifstream ficheiro("Database.csv");
+    
+    if (!ficheiro) return; //verficar abertura
+    
+    quantidadeAtual = 0;
+    
+    while(ficheiro.good() && quantidadeAtual < producaomax){ //o loop continua enquanto o ficheiro estiver bom e a quantidadeAtual for menor do q a prodmax
+        
+            Produto prod;
+            string linhalida;
+            
+                if(getline(ficheiro, linhalida)){ // a cada iteraçao ele guarda os dados do ficheiro na linhalida
+                    
+                stringstream ss(linhalida); //possibilita a leitura de uma linha completa na DB
+                string strID, strPreco, strQuant, strStatus;
+        
+                getline(ss, strID, ','); //cada getline le o seu campo e armazena na sua variavel
+                getline(ss, prod.nome, ',');          
+                getline(ss, strPreco, ',');           
+                getline(ss, strQuant, ',');      
+                getline(ss, strStatus, ',');        
+            
+            
+                prod.id = stoi(strID);                
+                prod.preco = stof(strPreco);          
+                prod.quantidade = stoi(strQuant); //conversões
+                prod.status = strStatus[0]; //pega no primeiro caractere na string strstatus e iguala ao primeiro caractere do array
+
+                produtos[quantidadeAtual] = prod; //prod armazenado no array na quantidadeAtual
+                quantidadeAtual++; 
+            
+                if (prod.id > ultimoIDutilizado) {
+                    ultimoIDutilizado = prod.id; //atualização
+                }
+            }
+        }
+    ficheiro.close();
+}
 //-------------------------------------------------------------------------------------------
 
 void adicionarProdutoDB(Produto produtos[], int quantidadeAtual){ //pronto
@@ -46,7 +129,7 @@ void adicionarProdutoDB(Produto produtos[], int quantidadeAtual){ //pronto
 
 
     if(ficheiro.is_open()){
-    for(int x = 0; x < quantidadeAtual; x ++){
+        for(int x = 0; x < quantidadeAtual; x ++){ //produtos armazenados
         ficheiro << produtos[x].id << "," 
                  << produtos[x].nome << ","
                  << produtos[x].preco << ","
@@ -59,7 +142,7 @@ void adicionarProdutoDB(Produto produtos[], int quantidadeAtual){ //pronto
 //----------------------------------------------------------------------------------------
 void adicionarProduto(Produto produtos[], int& quantidadeAtual, int& ultimoIDutilizado){ //pronto
     
-    produtos[quantidadeAtual].id = ++ultimoIDutilizado; // fazemos uma encrementaçao para adicionar o ID a cada produto 
+    produtos[quantidadeAtual].id = ++ultimoIDutilizado; // fazemos uma encrementaçao para adicionar o ID a cada produto id = 0
     
     cout << "\nQual o Nome do Produto: " << endl;
     cin.ignore(); //limpa o ENTER a seguir do cin e premite q o getline funcione
@@ -117,27 +200,28 @@ void eliminarProduto(Produto produtos[], int quantidadeAtual){ //pronto
             
             adicionarProdutoDB(produtos,quantidadeAtual);
             
-            cout << "O Produto Foi Excluido com Sucesso!" <<endl;
+            cout << "\nO Produto Foi Excluido com Sucesso!" <<endl;
+
         }
-        
     }
-    
 }
 //------------------------------------------------------------------------------------------
 void consultarProduto(Produto produtos[], int quantidadeAtual){ //pronto
     
     if(quantidadeAtual == 0){
         
-        cout << "\nNenhum Produto encontrado";
+        cout << "\nNenhum Produto encontrado" <<endl; 
     }
     
     for(int x = 0; x < quantidadeAtual; x++){
         
-        cout << "\nO ID do Produto é: " << produtos[x].id << endl;
+        cout << "O ID do Produto é: " << produtos[x].id << endl;
         cout << "O Nome do Produto é: " << produtos[x].nome << endl;
         cout << "O Preco do Produto é " << produtos[x].preco << endl;
         cout << "A Quantidade do Produto é: " << produtos[x].quantidade << endl;
         cout << "O Status do Produto é: " <<produtos[x].status << endl;
+
+        cout <<"--------------------------------------------------"<< endl;
     }
 }
 
@@ -145,8 +229,13 @@ void consultarProduto(Produto produtos[], int quantidadeAtual){ //pronto
 int main(){
     
     int opcao;
-
+    
+    iniciarDB();
+    
+    lerprodutosDB(produtos, quantidadeAtual, ultimoIDutilizado);
+    
 do{
+    
     menu();
   
     opcao = getOpcao(); // tem que ser assim senao o while nao reconhece a opcao de sair
@@ -170,7 +259,7 @@ do{
         break;
         
     case 5://sair
-        cout << "\n Saindo do Programa (freaky....)" <<endl;
+        cout << "\nSaindo do Programa (freaky.....) " <<endl;
         break;
 
     default:
