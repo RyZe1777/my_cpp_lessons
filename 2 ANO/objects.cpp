@@ -7,7 +7,7 @@ Class Carro{
         //int velocidadeMax;
         int anos;                       // atributo (int)
         string marca;                   // atributo (string)
-        void setVelocidade(int v){      // meto
+        void setVelocidade(int v){      // metodo
             velocidade = v;
         }
         //void insere(string x, int y);
