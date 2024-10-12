@@ -72,9 +72,9 @@ class Computer {
 
         void Ligar() {
             if (state) {
-                cout << "O computador ja esta ligado" << endl;
-            } else {
                 cout << "O computador vai ligar" << endl;
+            } else {
+                cout << "O computador ja esta ligado" << endl;
                 this->state = true;
             }
         };
