@@ -28,9 +28,9 @@ class Refrigerante {
         
         int opcao;
         
-        cout << "1. abrir lata" << endl;
-        cout << "2. beber" << endl;
-        cout << "3. meter no lixo\n" << endl;
+        cout << "1. Abrir Lata" << endl;
+        cout << "2. Beber" << endl;
+        cout << "3. Meter No Lixo\n" << endl;
         cin >> opcao;
         
         switch(opcao){
