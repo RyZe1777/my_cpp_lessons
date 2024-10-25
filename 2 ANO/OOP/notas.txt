@@ -1,0 +1,3 @@
+public: para tudo 
+private: so entre classes
+protected: para aquela determinada classe 
