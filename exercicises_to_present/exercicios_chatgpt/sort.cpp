@@ -1,37 +1,38 @@
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
+
 using namespace std;
 
-void bubbleSort(vector<string>& names) {
-    for (int i = 0; i < names.size(); i++) {
-        for (int j = 0; j < names.size() - 1 - i; j++) {
-            if (names[j] > names[j+1]) {
-                swap(names[j], names[j+1]);
+void Bublesort(vector<string>& names){
+    for(int x = 0; x < names.size(); x++){
+        for(int z = 0; z < names.size() - 1 - x; z++){
+            if(names[z] > names[z+1]){
+                swap(names[z], names[z+1]);
             }
         }
     }
 }
 
-int main() {
+int main(){
     int n;
     
-    cout << "Enter the number of names: ";
+    cout << "Quantos nomes deseja? " <<endl;
     cin >> n;
-
-    vector<string> names(n);
-
-    cout << "Enter " << n << " names:" << endl;
-    for (int i = 0; i < n; i++) {
-        cin >> names[i];
-    }
-
-    bubbleSort(names);
-
-    cout << "\nSorted names in alphabetical order:" << endl;
-    for (const string& name : names) {
-        cout << name << endl;
-    }
-
+    
+    vector<string>names(n);
+    
+    cout << "Digite " << n << " nomes: " <<endl;
+        for(int i = 0; i < n; i++){
+            cin >> names[i];
+        }
+        
+    Bublesort(names);
+    
+    cout << "A ordem correta é: " <<endl;
+        for(const string& names : names){
+            cout << names << endl;
+        }
+        
     return 0;
 }
