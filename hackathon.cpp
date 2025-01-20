@@ -11,7 +11,7 @@ int main(){
 
     int x;
 
-    while (x < 100)
+    while (x < 200)
     {
         x += 5;
         cout << x <<endl;
